@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   if (isLoading) return <SkeletonList />;
-  if (!error) return <Maintenance />;
+  if (error) return <Maintenance />;
 
   const jump = () => router.push("./maps");
 
