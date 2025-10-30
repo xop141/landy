@@ -4,7 +4,7 @@ import axios from "axios";
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
-export const BASE_URL = "http://localhost:9000";
+export const BASE_URL = "https://landybackend.onrender.com";
 
 export const fetcher = (url) => axios.get(`${url}`).then(res => res.data);
 export const districts = [

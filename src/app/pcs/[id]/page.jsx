@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import axios from "axios";
 import { useCafe } from "@/context/CafeContext";
-
+import { BASE_URL } from "@/lib/utils";
 const Page = () => {
   const { cafes } = useCafe();
   const { id } = useParams();
@@ -14,9 +14,9 @@ const Page = () => {
   useEffect(() => {
     const fetchPcs = async () => {
       try {
-        const res = await axios.get(`http://localhost:9000/cafe/pcs/${id}`);
+        const res = await axios.get(`${BASE_URL}/cafe/pcs/${id}`);
         setPcs(res.data);
-
+      
         // Group PCs by area name
         const groups = res.data.reduce((acc, pc) => {
           const group = pc.pc_area_name || "Other";

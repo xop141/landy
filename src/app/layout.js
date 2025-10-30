@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CafeProvider } from "@/context/CafeContext";
 import { Roboto } from "next/font/google";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],

@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import CafeBar from "../ui/cafeBar";
-import { DistrictContext } from "@/app/context/DistrictContext.js";
-
 
 const CafeList = ({ cafes, selectedDist }) => {
   const filteredCafes = selectedDist
@@ -18,4 +16,3 @@ const CafeList = ({ cafes, selectedDist }) => {
 };
 
 export default CafeList;
-

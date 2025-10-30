@@ -54,12 +54,12 @@ const CafeSpec = ({ cafeId, cafe = [], cafeAddress, cafeName, cafeAttributes = [
       <Separator className="my-2 bg-white/10" />
 
       {/* Tabs */}
-      <div className="flex justify-evenly gap-3">
+      <div className="flex justify-between">
         {cafe.map((item) => (
           <div
             key={item.name}
             onClick={() => setSelected(item.name)}
-            className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border transition-all duration-200 ${
+            className={`px-4 py-2 rounded-[30px] w-full text-center text-sm font-medium cursor-pointer border transition-all duration-200 ${
               selected === item.name
                 ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-transparent shadow-md"
                 : "bg-transparent border-white/20 text-gray-300 hover:border-white/40 hover:text-white"
